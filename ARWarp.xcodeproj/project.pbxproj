@@ -1,0 +1,759 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		015F71E1ED5FBB22EF774436 /* DeformableSceneMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F58A2ED749735106A64AB5 /* DeformableSceneMesh.swift */; };
+		070B5A19EEFCDBEB9641ED9E /* ARWarpConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5380C2F8D072B16952D5FD77 /* ARWarpConfiguration.swift */; };
+		0782ACFEFD50F0187E03828E /* ChunkVisibilityStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429BADBC9C653AD47D51DC0 /* ChunkVisibilityStateTests.swift */; };
+		0FD3309D319E0B57480D49D5 /* ARWarpKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2750BC9A30C033261D8598 /* ARWarpKit.framework */; };
+		13ED7F3876DAD2027DEE4849 /* MetalSceneDeformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB284F51239E06343E90C72 /* MetalSceneDeformer.swift */; };
+		2213B2DFDA8FC6A2AD0216A5 /* DeformableGridMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C22D8724D8CD09C32DCD039 /* DeformableGridMesh.swift */; };
+		2226FAACFFC72BA0966A25A2 /* ARWarpKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2750BC9A30C033261D8598 /* ARWarpKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		234AD89446A9708848F3B193 /* AudioAnalysisConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71E3FAA543FA408C181C629 /* AudioAnalysisConfiguration.swift */; };
+		23800B34140352963DB980C5 /* FeatureSmoother.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BC6F0F1393896F7E6D6710 /* FeatureSmoother.swift */; };
+		297E5EC67176D499E31F6F68 /* WarpPresetRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AAD9A3C7F471AD2A60BDB /* WarpPresetRegistryTests.swift */; };
+		2ED04BC20F6A6D7A8286654F /* DeformableVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA670295B7D5ED6BA7504C /* DeformableVertex.swift */; };
+		3B1CA0573D91D54D93EF9EB6 /* AudioDeformUniforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B8F3C2F9E37D573A4E653F /* AudioDeformUniforms.swift */; };
+		3D5A822F22A673EA3BF1254F /* ARWarpModuleConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF14FACEA26FD64B27B17C /* ARWarpModuleConfigurationTests.swift */; };
+		555AD4A5459A51BA7612EE65 /* DeformationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE54A42243F9BE6C67D672A /* DeformationConfiguration.swift */; };
+		58BA0E23DB0F72890BF7DF6F /* DisplacementMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF71BFD7D345780D0B00378E /* DisplacementMode.swift */; };
+		5D74F455D04AA58D930F40EF /* ARWarpSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0EF1702BC0C6FE6E4A8A3A /* ARWarpSessionController.swift */; };
+		650A5C9811CC28CD36053D8A /* AudioDrivenDeformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3F21B857AC1DE0CB5F53D /* AudioDrivenDeformer.swift */; };
+		66BE86FB60B7ED6348BE0D24 /* ARWarpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D52A0E98597F7DB51BC99BD /* ARWarpError.swift */; };
+		71F08C6817B30E22C823FD0E /* SceneDeformationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDD6BE1121C3551D5C04782 /* SceneDeformationConfiguration.swift */; };
+		8804FEF122405A5B3BAA2BC3 /* DeformationSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985DA43A201606F0FDA9BA1 /* DeformationSceneController.swift */; };
+		8D07F4CD04998E4406343900 /* ARMeshGeometryExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8C13471D9B3E8A9ADB8C4A /* ARMeshGeometryExtractor.swift */; };
+		9576823C33CBA66FA8DFFFBA /* SceneMeshDeformationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195762323BCDCC17964CC0E1 /* SceneMeshDeformationManager.swift */; };
+		991735B4A6E0986B7A621BFE /* AudioFeatureSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B74DF7FC56635496A9CB19 /* AudioFeatureSnapshot.swift */; };
+		A5F7085933E3482224DEA0C0 /* AudioFeatureEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977ED29F6FDEC3FBEB4913E /* AudioFeatureEngine.swift */; };
+		A9D09CA846E248E07D7518C1 /* SceneDeformation.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A14332B9A1FD10F98DD2C /* SceneDeformation.metal */; };
+		B0553EECA64EB93185679E1F /* SceneMeshMaterialFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E21917EB41FE443A3E9E74 /* SceneMeshMaterialFactory.swift */; };
+		B0740F5154E5D116D69FAF06 /* MeshResource+ARMeshGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30DFAC42F350619CD48761 /* MeshResource+ARMeshGeometry.swift */; };
+		B2BCBE5C562A2EC17D5C4B68 /* ARWarpKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2750BC9A30C033261D8598 /* ARWarpKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3E1BE919574A051569F3142 /* SessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885AA89C6E595F0C17EE084 /* SessionState.swift */; };
+		B7D41E71A6879E1DDD417128 /* AudioFeatureMeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA0889CE029147583BF413 /* AudioFeatureMeterView.swift */; };
+		C729B31AA6BF272913DA0575 /* ARWarpExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF90DFEDEE7DA9C83E187A /* ARWarpExperienceView.swift */; };
+		CE0CF5404D56FDB44ADF4346 /* ChunkVisibilityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C468ACFC0324A119A52484 /* ChunkVisibilityState.swift */; };
+		D1E7578D2FC56C3BA846695A /* ARWarpKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2750BC9A30C033261D8598 /* ARWarpKit.framework */; };
+		D857EE286E18B71C1DD80B73 /* FFTAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F8859E5AD12256C0892972 /* FFTAnalyzer.swift */; };
+		DDC5EF1664E382D08589F0C5 /* ARWarpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D0F252D04D2C6B3460E0BD /* ARWarpApp.swift */; };
+		E6947724BADE487AEE5871D4 /* ARWarpContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38980BA07B80143863D11E /* ARWarpContainerView.swift */; };
+		F35EDBF60EB701B985F1A190 /* ARWarpModuleConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94C2951157BA4085699FE85 /* ARWarpModuleConfiguration.swift */; };
+		F43F6CD22766C5F2CEAC6E3F /* ARWarpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E40C439CECAD614748D1DD4 /* ARWarpView.swift */; };
+		FAC3CE68FC455CE284D2A49A /* WarpPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA05FD00BCFBD138A282B9F /* WarpPreset.swift */; };
+		FBF88F16D50A1FEE3860D00F /* DeformationDebugPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C9B020E8444A392AEFF88 /* DeformationDebugPanel.swift */; };
+		FFBD515398A4CDD0360C673C /* DeformationDriveSmoother.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C0D5E67EE8C435776986 /* DeformationDriveSmoother.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE5504AD92492DEDBE3E12DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D64B206FA107F69309FD0F7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0927CD329A11ABE338490718;
+			remoteInfo = ARWarpKit;
+		};
+		E334DBB7040DB30679D3B7EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D64B206FA107F69309FD0F7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0927CD329A11ABE338490718;
+			remoteInfo = ARWarpKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5FE19C651E93DC7399298CC2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B2BCBE5C562A2EC17D5C4B68 /* ARWarpKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF72B05F14521B64BF329A5A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2226FAACFFC72BA0966A25A2 /* ARWarpKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		05A70FA6F6D53FEA8B1E16D9 /* ARWarp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARWarp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08BC6F0F1393896F7E6D6710 /* FeatureSmoother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSmoother.swift; sourceTree = "<group>"; };
+		0A0A14332B9A1FD10F98DD2C /* SceneDeformation.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SceneDeformation.metal; sourceTree = "<group>"; };
+		0A30DFAC42F350619CD48761 /* MeshResource+ARMeshGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeshResource+ARMeshGeometry.swift"; sourceTree = "<group>"; };
+		0C2750BC9A30C033261D8598 /* ARWarpKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ARWarpKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE54A42243F9BE6C67D672A /* DeformationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeformationConfiguration.swift; sourceTree = "<group>"; };
+		0D52A0E98597F7DB51BC99BD /* ARWarpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARWarpError.swift; sourceTree = "<group>"; };
+		195762323BCDCC17964CC0E1 /* SceneMeshDeformationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneMeshDeformationManager.swift; sourceTree = "<group>"; };
+		1A1C9B020E8444A392AEFF88 /* DeformationDebugPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeformationDebugPanel.swift; sourceTree = "<group>"; };
+		1F8C13471D9B3E8A9ADB8C4A /* ARMeshGeometryExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMeshGeometryExtractor.swift; sourceTree = "<group>"; };
+		21E21917EB41FE443A3E9E74 /* SceneMeshMaterialFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneMeshMaterialFactory.swift; sourceTree = "<group>"; };
+		21E3F21B857AC1DE0CB5F53D /* AudioDrivenDeformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDrivenDeformer.swift; sourceTree = "<group>"; };
+		2C22D8724D8CD09C32DCD039 /* DeformableGridMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeformableGridMesh.swift; sourceTree = "<group>"; };
+		36F8859E5AD12256C0892972 /* FFTAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTAnalyzer.swift; sourceTree = "<group>"; };
+		3885AA89C6E595F0C17EE084 /* SessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionState.swift; sourceTree = "<group>"; };
+		3E40C439CECAD614748D1DD4 /* ARWarpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARWarpView.swift; sourceTree = "<group>"; };
+		4985DA43A201606F0FDA9BA1 /* DeformationSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeformationSceneController.swift; sourceTree = "<group>"; };
+		4E38980BA07B80143863D11E /* ARWarpContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARWarpContainerView.swift; sourceTree = "<group>"; };
+		5380C2F8D072B16952D5FD77 /* ARWarpConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARWarpConfiguration.swift; sourceTree = "<group>"; };
+		5977ED29F6FDEC3FBEB4913E /* AudioFeatureEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFeatureEngine.swift; sourceTree = "<group>"; };
+		59B8F3C2F9E37D573A4E653F /* AudioDeformUniforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeformUniforms.swift; sourceTree = "<group>"; };
+		5BB284F51239E06343E90C72 /* MetalSceneDeformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalSceneDeformer.swift; sourceTree = "<group>"; };
+		79FA670295B7D5ED6BA7504C /* DeformableVertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeformableVertex.swift; sourceTree = "<group>"; };
+		7FDD6BE1121C3551D5C04782 /* SceneDeformationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDeformationConfiguration.swift; sourceTree = "<group>"; };
+		93B74DF7FC56635496A9CB19 /* AudioFeatureSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFeatureSnapshot.swift; sourceTree = "<group>"; };
+		9429BADBC9C653AD47D51DC0 /* ChunkVisibilityStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChunkVisibilityStateTests.swift; sourceTree = "<group>"; };
+		95E9FF39689971A8B64795BA /* ARWarpTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ARWarpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8F58A2ED749735106A64AB5 /* DeformableSceneMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeformableSceneMesh.swift; sourceTree = "<group>"; };
+		ACDF90DFEDEE7DA9C83E187A /* ARWarpExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARWarpExperienceView.swift; sourceTree = "<group>"; };
+		AFFF14FACEA26FD64B27B17C /* ARWarpModuleConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARWarpModuleConfigurationTests.swift; sourceTree = "<group>"; };
+		BC0EF1702BC0C6FE6E4A8A3A /* ARWarpSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARWarpSessionController.swift; sourceTree = "<group>"; };
+		BEA05FD00BCFBD138A282B9F /* WarpPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarpPreset.swift; sourceTree = "<group>"; };
+		C68AAD9A3C7F471AD2A60BDB /* WarpPresetRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarpPresetRegistryTests.swift; sourceTree = "<group>"; };
+		D5C468ACFC0324A119A52484 /* ChunkVisibilityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChunkVisibilityState.swift; sourceTree = "<group>"; };
+		D71E3FAA543FA408C181C629 /* AudioAnalysisConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioAnalysisConfiguration.swift; sourceTree = "<group>"; };
+		E94C2951157BA4085699FE85 /* ARWarpModuleConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARWarpModuleConfiguration.swift; sourceTree = "<group>"; };
+		F0D0F252D04D2C6B3460E0BD /* ARWarpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARWarpApp.swift; sourceTree = "<group>"; };
+		F7FA0889CE029147583BF413 /* AudioFeatureMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFeatureMeterView.swift; sourceTree = "<group>"; };
+		FCC2C0D5E67EE8C435776986 /* DeformationDriveSmoother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeformationDriveSmoother.swift; sourceTree = "<group>"; };
+		FF71BFD7D345780D0B00378E /* DisplacementMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplacementMode.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49B8F0AC27B2D10114D566C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FD3309D319E0B57480D49D5 /* ARWarpKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E52625A985740F9D5696CB7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1E7578D2FC56C3BA846695A /* ARWarpKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03966EDCC21208ABBFAFEE9B /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				0A0A14332B9A1FD10F98DD2C /* SceneDeformation.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		3C0CE66457A3DE77D9D24E3A /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				D71E3FAA543FA408C181C629 /* AudioAnalysisConfiguration.swift */,
+				5977ED29F6FDEC3FBEB4913E /* AudioFeatureEngine.swift */,
+				08BC6F0F1393896F7E6D6710 /* FeatureSmoother.swift */,
+				36F8859E5AD12256C0892972 /* FFTAnalyzer.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		402C077DFCB1A8CC40854B4B /* Materials */ = {
+			isa = PBXGroup;
+			children = (
+				21E21917EB41FE443A3E9E74 /* SceneMeshMaterialFactory.swift */,
+				BEA05FD00BCFBD138A282B9F /* WarpPreset.swift */,
+			);
+			path = Materials;
+			sourceTree = "<group>";
+		};
+		54C2709946176D1C1B6E967B /* Deformation */ = {
+			isa = PBXGroup;
+			children = (
+				1F8C13471D9B3E8A9ADB8C4A /* ARMeshGeometryExtractor.swift */,
+				59B8F3C2F9E37D573A4E653F /* AudioDeformUniforms.swift */,
+				21E3F21B857AC1DE0CB5F53D /* AudioDrivenDeformer.swift */,
+				D5C468ACFC0324A119A52484 /* ChunkVisibilityState.swift */,
+				2C22D8724D8CD09C32DCD039 /* DeformableGridMesh.swift */,
+				A8F58A2ED749735106A64AB5 /* DeformableSceneMesh.swift */,
+				79FA670295B7D5ED6BA7504C /* DeformableVertex.swift */,
+				0CE54A42243F9BE6C67D672A /* DeformationConfiguration.swift */,
+				FCC2C0D5E67EE8C435776986 /* DeformationDriveSmoother.swift */,
+				4985DA43A201606F0FDA9BA1 /* DeformationSceneController.swift */,
+				FF71BFD7D345780D0B00378E /* DisplacementMode.swift */,
+				5BB284F51239E06343E90C72 /* MetalSceneDeformer.swift */,
+				7FDD6BE1121C3551D5C04782 /* SceneDeformationConfiguration.swift */,
+				195762323BCDCC17964CC0E1 /* SceneMeshDeformationManager.swift */,
+			);
+			path = Deformation;
+			sourceTree = "<group>";
+		};
+		5A5494E75185ADDE86CEA512 = {
+			isa = PBXGroup;
+			children = (
+				E3B24F6A56B92A9839C2974A /* Resources */,
+				FFEEF314C74DCFB2A2667916 /* Sources */,
+				69720762CD2D1E9119CC4F18 /* Tests */,
+				EBCF3C013AA19DB39C838ABD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C06ADB2A0D5622766AE0C9A /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				4E38980BA07B80143863D11E /* ARWarpContainerView.swift */,
+				ACDF90DFEDEE7DA9C83E187A /* ARWarpExperienceView.swift */,
+				BC0EF1702BC0C6FE6E4A8A3A /* ARWarpSessionController.swift */,
+				3E40C439CECAD614748D1DD4 /* ARWarpView.swift */,
+				F7FA0889CE029147583BF413 /* AudioFeatureMeterView.swift */,
+				1A1C9B020E8444A392AEFF88 /* DeformationDebugPanel.swift */,
+				0A30DFAC42F350619CD48761 /* MeshResource+ARMeshGeometry.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		69720762CD2D1E9119CC4F18 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AFFF14FACEA26FD64B27B17C /* ARWarpModuleConfigurationTests.swift */,
+				9429BADBC9C653AD47D51DC0 /* ChunkVisibilityStateTests.swift */,
+				C68AAD9A3C7F471AD2A60BDB /* WarpPresetRegistryTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		9683B16B4F74F4EB7751BD4A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5380C2F8D072B16952D5FD77 /* ARWarpConfiguration.swift */,
+				0D52A0E98597F7DB51BC99BD /* ARWarpError.swift */,
+				E94C2951157BA4085699FE85 /* ARWarpModuleConfiguration.swift */,
+				93B74DF7FC56635496A9CB19 /* AudioFeatureSnapshot.swift */,
+				3885AA89C6E595F0C17EE084 /* SessionState.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A1853F77020DC047CE390130 /* AppHarness */ = {
+			isa = PBXGroup;
+			children = (
+				F0D0F252D04D2C6B3460E0BD /* ARWarpApp.swift */,
+			);
+			path = AppHarness;
+			sourceTree = "<group>";
+		};
+		E3B24F6A56B92A9839C2974A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				03966EDCC21208ABBFAFEE9B /* Shaders */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EBCF3C013AA19DB39C838ABD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05A70FA6F6D53FEA8B1E16D9 /* ARWarp.app */,
+				0C2750BC9A30C033261D8598 /* ARWarpKit.framework */,
+				95E9FF39689971A8B64795BA /* ARWarpTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFEEF314C74DCFB2A2667916 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A1853F77020DC047CE390130 /* AppHarness */,
+				5C06ADB2A0D5622766AE0C9A /* AR */,
+				3C0CE66457A3DE77D9D24E3A /* Audio */,
+				9683B16B4F74F4EB7751BD4A /* Core */,
+				54C2709946176D1C1B6E967B /* Deformation */,
+				402C077DFCB1A8CC40854B4B /* Materials */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0927CD329A11ABE338490718 /* ARWarpKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09CB8624160E82E85C184286 /* Build configuration list for PBXNativeTarget "ARWarpKit" */;
+			buildPhases = (
+				582A7D7193BA679E81E1274D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARWarpKit;
+			packageProductDependencies = (
+			);
+			productName = ARWarpKit;
+			productReference = 0C2750BC9A30C033261D8598 /* ARWarpKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0A0C47A8F3D673AF10E92A49 /* ARWarpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F318B00E090A39F9832D6910 /* Build configuration list for PBXNativeTarget "ARWarpTests" */;
+			buildPhases = (
+				C4B436B29861793C8B56CFEF /* Sources */,
+				49B8F0AC27B2D10114D566C7 /* Frameworks */,
+				DF72B05F14521B64BF329A5A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0FEAC960C1A70F4F2241C00F /* PBXTargetDependency */,
+			);
+			name = ARWarpTests;
+			packageProductDependencies = (
+			);
+			productName = ARWarpTests;
+			productReference = 95E9FF39689971A8B64795BA /* ARWarpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B30AACA8349D1E0654D26DE /* ARWarp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA2FE2E86FB65D2C8CFE6681 /* Build configuration list for PBXNativeTarget "ARWarp" */;
+			buildPhases = (
+				808134396C2FD0DBD83B6680 /* Sources */,
+				E52625A985740F9D5696CB7C /* Frameworks */,
+				5FE19C651E93DC7399298CC2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD6BF39F84A88C47CCA8A84F /* PBXTargetDependency */,
+			);
+			name = ARWarp;
+			packageProductDependencies = (
+			);
+			productName = ARWarp;
+			productReference = 05A70FA6F6D53FEA8B1E16D9 /* ARWarp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D64B206FA107F69309FD0F7D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					5B30AACA8349D1E0654D26DE = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1007D8DAC959540EAFA3571E /* Build configuration list for PBXProject "ARWarp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 5A5494E75185ADDE86CEA512;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EBCF3C013AA19DB39C838ABD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B30AACA8349D1E0654D26DE /* ARWarp */,
+				0927CD329A11ABE338490718 /* ARWarpKit */,
+				0A0C47A8F3D673AF10E92A49 /* ARWarpTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		582A7D7193BA679E81E1274D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D07F4CD04998E4406343900 /* ARMeshGeometryExtractor.swift in Sources */,
+				070B5A19EEFCDBEB9641ED9E /* ARWarpConfiguration.swift in Sources */,
+				E6947724BADE487AEE5871D4 /* ARWarpContainerView.swift in Sources */,
+				66BE86FB60B7ED6348BE0D24 /* ARWarpError.swift in Sources */,
+				C729B31AA6BF272913DA0575 /* ARWarpExperienceView.swift in Sources */,
+				F35EDBF60EB701B985F1A190 /* ARWarpModuleConfiguration.swift in Sources */,
+				5D74F455D04AA58D930F40EF /* ARWarpSessionController.swift in Sources */,
+				F43F6CD22766C5F2CEAC6E3F /* ARWarpView.swift in Sources */,
+				234AD89446A9708848F3B193 /* AudioAnalysisConfiguration.swift in Sources */,
+				3B1CA0573D91D54D93EF9EB6 /* AudioDeformUniforms.swift in Sources */,
+				650A5C9811CC28CD36053D8A /* AudioDrivenDeformer.swift in Sources */,
+				A5F7085933E3482224DEA0C0 /* AudioFeatureEngine.swift in Sources */,
+				B7D41E71A6879E1DDD417128 /* AudioFeatureMeterView.swift in Sources */,
+				991735B4A6E0986B7A621BFE /* AudioFeatureSnapshot.swift in Sources */,
+				CE0CF5404D56FDB44ADF4346 /* ChunkVisibilityState.swift in Sources */,
+				2213B2DFDA8FC6A2AD0216A5 /* DeformableGridMesh.swift in Sources */,
+				015F71E1ED5FBB22EF774436 /* DeformableSceneMesh.swift in Sources */,
+				2ED04BC20F6A6D7A8286654F /* DeformableVertex.swift in Sources */,
+				555AD4A5459A51BA7612EE65 /* DeformationConfiguration.swift in Sources */,
+				FBF88F16D50A1FEE3860D00F /* DeformationDebugPanel.swift in Sources */,
+				FFBD515398A4CDD0360C673C /* DeformationDriveSmoother.swift in Sources */,
+				8804FEF122405A5B3BAA2BC3 /* DeformationSceneController.swift in Sources */,
+				58BA0E23DB0F72890BF7DF6F /* DisplacementMode.swift in Sources */,
+				D857EE286E18B71C1DD80B73 /* FFTAnalyzer.swift in Sources */,
+				23800B34140352963DB980C5 /* FeatureSmoother.swift in Sources */,
+				B0740F5154E5D116D69FAF06 /* MeshResource+ARMeshGeometry.swift in Sources */,
+				13ED7F3876DAD2027DEE4849 /* MetalSceneDeformer.swift in Sources */,
+				A9D09CA846E248E07D7518C1 /* SceneDeformation.metal in Sources */,
+				71F08C6817B30E22C823FD0E /* SceneDeformationConfiguration.swift in Sources */,
+				9576823C33CBA66FA8DFFFBA /* SceneMeshDeformationManager.swift in Sources */,
+				B0553EECA64EB93185679E1F /* SceneMeshMaterialFactory.swift in Sources */,
+				B3E1BE919574A051569F3142 /* SessionState.swift in Sources */,
+				FAC3CE68FC455CE284D2A49A /* WarpPreset.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808134396C2FD0DBD83B6680 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDC5EF1664E382D08589F0C5 /* ARWarpApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B436B29861793C8B56CFEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D5A822F22A673EA3BF1254F /* ARWarpModuleConfigurationTests.swift in Sources */,
+				0782ACFEFD50F0187E03828E /* ChunkVisibilityStateTests.swift in Sources */,
+				297E5EC67176D499E31F6F68 /* WarpPresetRegistryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0FEAC960C1A70F4F2241C00F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0927CD329A11ABE338490718 /* ARWarpKit */;
+			targetProxy = E334DBB7040DB30679D3B7EC /* PBXContainerItemProxy */;
+		};
+		DD6BF39F84A88C47CCA8A84F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0927CD329A11ABE338490718 /* ARWarpKit */;
+			targetProxy = DE5504AD92492DEDBE3E12DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		16C2C8356EF0F10419EFB34B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackgreening.arwarp.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		73CCDEA68003BFD3F5DFBA65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ARWarp;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackgreening.arwarp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		987ABE27EC1A807CDDBD2C0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ARWarp uses the camera to reconstruct and warp surfaces in your environment.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "ARWarp uses the microphone to analyze music and drive real-time surface warping.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9A8DDEB6C86D2A539D27987F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackgreening.arwarp.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E5C6B2345934CDD9C6FAC81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackgreening.arwarpkit;
+				PRODUCT_NAME = ARWarpKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		A8ABA01DABE9D690F71EDEC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ARWarp;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackgreening.arwarp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD46A1A1F5034293D2652029 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackgreening.arwarpkit;
+				PRODUCT_NAME = ARWarpKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		FE71615DB8A84E16B9A4A97E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ARWarp uses the camera to reconstruct and warp surfaces in your environment.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "ARWarp uses the microphone to analyze music and drive real-time surface warping.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09CB8624160E82E85C184286 /* Build configuration list for PBXNativeTarget "ARWarpKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD46A1A1F5034293D2652029 /* Debug */,
+				9E5C6B2345934CDD9C6FAC81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1007D8DAC959540EAFA3571E /* Build configuration list for PBXProject "ARWarp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE71615DB8A84E16B9A4A97E /* Debug */,
+				987ABE27EC1A807CDDBD2C0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EA2FE2E86FB65D2C8CFE6681 /* Build configuration list for PBXNativeTarget "ARWarp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8ABA01DABE9D690F71EDEC1 /* Debug */,
+				73CCDEA68003BFD3F5DFBA65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F318B00E090A39F9832D6910 /* Build configuration list for PBXNativeTarget "ARWarpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A8DDEB6C86D2A539D27987F /* Debug */,
+				16C2C8356EF0F10419EFB34B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D64B206FA107F69309FD0F7D /* Project object */;
+}

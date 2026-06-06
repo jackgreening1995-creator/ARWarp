@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: macos-15
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate --spec project.yml
+
+      - name: List available simulators
+        run: xcrun simctl list devices available
+
+      - name: Build
+        run: |
+          xcodebuild -project ARWarp.xcodeproj \
+            -scheme ARWarp \
+            -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
+            build
+
+      - name: Test
+        run: |
+          xcodebuild -project ARWarp.xcodeproj \
+            -scheme ARWarp \
+            -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
+            test

@@ -1,0 +1,26 @@
+# Xcode
+build/
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+xcuserdata/
+DerivedData/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Swift Package Manager
+.swiftpm/
+
+# Agent tooling
+.commandcode/
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+AI_CONTEXT.md

@@ -1,0 +1,117 @@
+name: ARWarp
+options:
+  bundleIdPrefix: com.jackgreening
+  deploymentTarget:
+    iOS: "18.0"
+  xcodeVersion: "16.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    TARGETED_DEVICE_FAMILY: "1,2"
+    INFOPLIST_KEY_UILaunchScreen_Generation: YES
+    INFOPLIST_KEY_UIStatusBarHidden: YES
+    INFOPLIST_KEY_UIRequiresFullScreen: YES
+    INFOPLIST_KEY_NSCameraUsageDescription: "ARWarp uses the camera to reconstruct and warp surfaces in your environment."
+    INFOPLIST_KEY_NSMicrophoneUsageDescription: "ARWarp uses the microphone to analyze music and drive real-time surface warping."
+    INFOPLIST_KEY_UIRequiredDeviceCapabilities: [arkit]
+
+targets:
+  ARWarpKit:
+    type: framework
+    platform: iOS
+    sources:
+      - path: Sources/Core
+      - path: Sources/AR
+      - path: Sources/Audio
+        excludes:
+          - ".gitkeep"
+      - path: Sources/Deformation
+        excludes:
+          - ".gitkeep"
+      - path: Sources/Materials
+        excludes:
+          - ".gitkeep"
+      - path: Resources/Shaders
+        includes:
+          - "*.metal"
+    resources:
+      - path: Resources/Shaders
+        includes:
+          - "README.md"
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.jackgreening.arwarpkit
+        PRODUCT_NAME: ARWarpKit
+
+  ARWarp:
+    type: application
+    platform: iOS
+    dependencies:
+      - target: ARWarpKit
+    sources:
+      - path: Sources/AppHarness
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jackgreening.arwarp
+        CODE_SIGN_STYLE: Automatic
+        INFOPLIST_KEY_CFBundleDisplayName: ARWarp
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
+        METAL_ENABLE_DEBUG_INFO: YES
+    info:
+      path: Resources/Info.plist
+      properties:
+        UILaunchScreen: {}
+        UIRequiresFullScreen: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+          - UIInterfaceOrientationPortraitUpsideDown
+        "UISupportedInterfaceOrientations~ipad":
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UIRequiredDeviceCapabilities:
+          - arkit
+        NSCameraUsageDescription: "ARWarp uses the camera to reconstruct and warp surfaces in your environment."
+        NSMicrophoneUsageDescription: "ARWarp uses the microphone to analyze music and drive real-time surface warping."
+
+  ARWarpTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+        excludes:
+          - ".gitkeep"
+    dependencies:
+      - target: ARWarpKit
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.jackgreening.arwarp.tests
+
+schemes:
+  ARWarp:
+    build:
+      targets:
+        ARWarpKit: all
+        ARWarp: all
+        ARWarpTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      gatherCoverageData: true
+      targets:
+        - ARWarpTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
