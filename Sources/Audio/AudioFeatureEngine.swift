@@ -131,7 +131,7 @@ final class AudioFeatureEngine: ObservableObject {
             try session.setCategory(
                 .playAndRecord,
                 mode: .measurement,
-                options: [.defaultToSpeaker, .mixWithOthers, .allowBluetoothHFP]
+                options: [.defaultToSpeaker, .mixWithOthers]
             )
             try session.setActive(true, options: .notifyOthersOnDeactivation)
 
