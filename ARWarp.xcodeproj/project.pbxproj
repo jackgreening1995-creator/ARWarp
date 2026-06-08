@@ -93,7 +93,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		05A70FA6F6D53FEA8B1E16D9 /* ARWarp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARWarp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05A70FA6F6D53FEA8B1E16D9 /* ARWarp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ARWarp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08BC6F0F1393896F7E6D6710 /* FeatureSmoother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSmoother.swift; sourceTree = "<group>"; };
 		0A0A14332B9A1FD10F98DD2C /* SceneDeformation.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SceneDeformation.metal; sourceTree = "<group>"; };
 		0A30DFAC42F350619CD48761 /* MeshResource+ARMeshGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeshResource+ARMeshGeometry.swift"; sourceTree = "<group>"; };
@@ -481,7 +481,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ARWarp;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -544,7 +543,9 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "ARWarp uses the camera to reconstruct and warp surfaces in your environment.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "ARWarp uses the microphone to analyze music and drive real-time surface warping.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = (
+					arkit,
+				);
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -605,7 +606,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ARWarp;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -698,7 +698,9 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "ARWarp uses the camera to reconstruct and warp surfaces in your environment.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "ARWarp uses the microphone to analyze music and drive real-time surface warping.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = (
+					arkit,
+				);
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
